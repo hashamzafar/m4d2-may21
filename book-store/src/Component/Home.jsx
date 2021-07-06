@@ -19,7 +19,7 @@ const Home = ()=>{
     </Card.Text>
     
   </Card.Body>
-  <Button variant="secondary" className="button"> Buy{book.price}</Button>
+  <Button variant="secondary" className="button"> Buy $ {book.price}</Button>
 </Card>
 </Col>) 
 
