@@ -42,11 +42,17 @@
 
 .body {
 	background-color: cadetblue;
+	background-image: url(https://i.pinimg.com/originals/07/19/1b/07191b585ca7be5fa5e412a622489d5a.jpg);
 }
 .CardBody {
-	height: 200px;
+	height: 130px;
+	position: relative;
 }
 Footer {
-	background-color: rgb(39, 82, 210);
+	background-color: gray;
 	color: white;
+}
+.button {
+	position: absolute;
+	margin-top: 60px;
 }

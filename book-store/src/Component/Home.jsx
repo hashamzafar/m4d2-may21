@@ -9,16 +9,19 @@ const Home = ()=>{
             <Row>
                 
         {
-          books.map( book =>(<Col sm={6} md={3}><Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={book.img} width= '100' height= '400'  className=''/>
+          books.map( book =>(<Col sm={6} md={4} lg={3}  className='m-3'>
+              <Card style={{ width: '18rem' }} >
+  <Card.Img variant="top" src={book.img} width= '800' height= '400'  />
   <Card.Body className='CardBody'>
     <Card.Title>{book.title}</Card.Title>
     <Card.Text>
       {book.Category}
     </Card.Text>
-    <Button variant="primary"> Buy{book.price}</Button>
+    
   </Card.Body>
-</Card></Col>) 
+  <Button variant="secondary" className="button"> Buy{book.price}</Button>
+</Card>
+</Col>) 
 
           )
         }
