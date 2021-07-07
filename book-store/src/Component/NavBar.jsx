@@ -1,5 +1,5 @@
 import {Navbar,Nav,Form, FormControl,Button} from 'react-bootstrap'
-
+import {Link} from 'react-router-dom'
 
 
 const NavBar = ()=>{
@@ -10,8 +10,8 @@ return (
   <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">Book Store</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="/Category">Category</Nav.Link>
+      <Link to="/">Home</Link>
+      <Link to="/category">Category</Link>
       <Nav.Link href="#pricing">Cart</Nav.Link>
     </Nav>
     <Form inline>

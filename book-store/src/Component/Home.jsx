@@ -5,13 +5,13 @@ import {Card,Button,Container,Row,Col} from 'react-bootstrap'
 
 const Home = ()=>{
     return(
-        <Container>
+        <Container Fluid className="body">
             <Row>
                 
         {
-          books.map( book =>(<Col sm={6} md={4} lg={3}  className='m-3'>
-              <Card style={{ width: '18rem' }} >
-  <Card.Img variant="top" src={book.img} width= '800' height= '400'  />
+          books.map( book =>(<Col sm={6} md={4} lg={3}  className='my-3'>
+              <Card style={{ width: '14rem' }} >
+  <Card.Img variant="top" src={book.img} width= '300' height= '300'  />
   <Card.Body className='CardBody'>
     <Card.Title>{book.title}</Card.Title>
     <Card.Text>
