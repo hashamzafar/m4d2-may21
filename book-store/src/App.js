@@ -15,20 +15,19 @@ function App() {
       <div className="App">
         <NavBar />
         <WarningSign color='success' text='warning' />
-        <SingleBook img={books[1].img} title={books[1].title} />
+
         <Switch>
           <Route path="/category" exact >
             <Category />
           </Route>
           <Route path="/" exact>
-            <Home />
+
             <div className="body">
               <MyJumbotron />
+              <SingleBook img={books[1].img} title={books[1].title} asin={books[1].asin} />
               <Home />
             </div>
           </Route>
-
-
 
         </Switch>
 

@@ -1,7 +1,8 @@
 
 import { Component } from 'react'
-import Card from 'react-bootstrap/Card'
-import Col from "react-bootstrap/Col"
+import CommentArea from './CommentArea'
+
+import {Container,Col,Row,Card} from 'react-bootstrap/'
 
 
 class SingleBook extends Component {
@@ -24,7 +25,9 @@ class SingleBook extends Component {
          
         </Card.Body>
       </Card>
-      
+      {
+                    this.state.selected && <CommentArea asin={this.props.asin} />
+                }
         </Col>
         </Row>
         </Container>
