@@ -19,8 +19,7 @@ class AddComment extends Component {
                 body: JSON.stringify(this.state.comment),
                 headers: {
                     'Content-type': 'application/json',
-                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGI3OWY5NTgxNmI1YjAwMTU5NDA3NDAiLCJpYXQiOjE2MjI2NDY2NzcsImV4cCI6MTYyMzg1NjI3N30.y-rBwB5WAQOWBvWrLlAgTQUrbGulxd2M6cWH3VLyGLw'
-                }
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzVhM2NlYWY0ODAwMTVjOTE4NjMiLCJpYXQiOjE2MjYxMDQ2MTAsImV4cCI6MTYyNzMxNDIxMH0.E8E1HLyIVw_3Kk7cbYeAdvOdhonPKfIrGh_qLvfy8Zg"                }
             })
             if (response.ok) {
                 // the comment has been sent succesfully!!
@@ -68,9 +67,15 @@ class AddComment extends Component {
                             <option>5</option>
                         </Form.Control>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="secondary" type="submit">
+
                         Submit
                     </Button>
+                    <Button variant="danger" type="submit">
+
+                        Delete
+                    </Button>
+
                 </Form>
             </div>
         )

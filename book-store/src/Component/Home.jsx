@@ -4,6 +4,8 @@ import SingleComment from './SingleComment'
 import React, { Component } from 'react';
 import SingleBook from './SingleBook';
 import CommentArea from './CommentArea';
+import AddComment from './AddComment';
+import CommentList from './CommentList';
 class Home extends Component {
   state ={
 
@@ -15,11 +17,11 @@ class Home extends Component {
     return(
         <Container Fluid className="body">
           <Row>
-            <Col sm={6}>
+            <Col sm={8}>
             <Row>
                 
         {
-          books.map( book =>(<Col sm={6} md={6} lg={6}  className='my-3 '>
+          books.map( book =>(<Col sm={6} md={4} lg={4}  className='my-3 '>
               <Card style={{ width: '14rem' }} >
   <Card.Img variant="top" src={book.img} width= '300' height= '300'  />
   <Card.Body className='CardBody'>
@@ -31,7 +33,7 @@ class Home extends Component {
   </Card.Body>
   <Button variant="secondary" className="button" onClick=''> Buy $ {book.price} </Button>
   {/* <SingleBook/> */}
-  <Button variant="danger"><SingleBook/></Button>
+  
 </Card>
 
 </Col>) 
@@ -41,7 +43,10 @@ class Home extends Component {
         
         </Row>
         </Col>
-        <Col sm={6}>
+        <Col sm={4}>
+          <Button variant="warning"><SingleBook/></Button>
+          <AddComment/>
+          {/* <CommentList/> */}
         </Col>
         </Row>
         
