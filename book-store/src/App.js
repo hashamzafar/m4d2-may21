@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import NavBar from './Component/NavBar'
 import MyJumbotron from './Component/Jumbotron'
@@ -9,6 +9,7 @@ import Category from './Component/Category'
 import WarningSign from './Component/WarningSign';
 import SingleBook from './Component/SingleBook'
 import books from './json-data/scifi.json'
+import Registration from './Component/Registration'
 function App() {
   return (
     <Router>
@@ -16,20 +17,20 @@ function App() {
         <NavBar />
         <WarningSign color='success' text='warning' />
 
-        <Switch>
-          <Route path="/category" exact >
-            <Category />
-          </Route>
-          <Route path="/" exact>
+        {/* <Switch> */}
+        <Route path="/category" exact >
+          <Category />
+        </Route>
+        <Route path="/" exact>
 
-            <div className="body">
-              <MyJumbotron />
-              <SingleBook img={books[1].img} title={books[1].title} asin={books[1].asin} />
-              <Home />
-            </div>
-          </Route>
-
-        </Switch>
+          <div className="body">
+            <MyJumbotron />
+            <SingleBook img={books[1].img} title={books[1].title} asin={books[1].asin} />
+            <Home />
+          </div>
+        </Route>
+        <Route path="/Rigistration" exact render={(routerProps) => <Registration  {...routerProps} />} />
+        {/* </Switch> */}
 
         <Footer />
       </div>

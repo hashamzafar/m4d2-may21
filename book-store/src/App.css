@@ -56,3 +56,9 @@ Footer {
 	position: absolute;
 	margin-top: 60px;
 }
+.Link {
+	color: white;
+}
+.Link :hover {
+	color: red;
+}
